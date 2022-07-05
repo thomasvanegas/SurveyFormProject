@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>Survey Form Project - FreeCodeCamp</title>
+  </head>
+
+  <body>
+    <header>
+      <h1 id="title">Survey Form Project</h1>
+      <p id="description">
+        El presente formulario tiene como próposito el desarrollo del primer
+        proyecto requerido para la certificación "Responsive Web Design",
+        brindada por la organización sin ánimo de lucro FreeCodeCamp.
+      </p>
+    </header>
+
+    <form action="#" id="survey-form" class="flex-container">
+      <div class="flex-item">
+        <label for="name" id="name-label" class="yellow-font">Nombre</label>
+        <input
+          type="text"
+          name="name"
+          id="name"
+          placeholder="Ingrese su nombre aquí..."
+          required
+        />
+      </div>
+
+      <div class="flex-item">
+        <label for="lastname" id="lastname-label" class="yellow-font"
+          >Apellidos</label
+        >
+        <input
+          type="text"
+          name="lastname"
+          id="lastname"
+          placeholder="Ingrese sus Apellidos aquí..."
+          required
+        />
+      </div>
+
+      <div class="flex-item">
+        <label for="email" id="email-label" class="yellow-font">Email</label>
+        <input
+          type="email"
+          name="email"
+          id="email"
+          placeholder="Ingrese su correo electrónico... Ejemplo: nombre@correo.com"
+          required
+        />
+      </div>
+
+      <div class="flex-item">
+        <label for="number" id="number-label" class="yellow-font">Edad</label>
+        <input
+          type="number"
+          name="number"
+          id="number"
+          placeholder="Ingrese su edad... (Solo se aceptan datos numéricos)"
+          min="0"
+          max="150"
+          required
+        />
+      </div>
+
+      <!-- ---- ---- RADIO INPUTS ---- ---- -->
+
+      <div class="flex-item">
+        <h2 class="genero yellow-font">Género</h2>
+
+        <span class="row">
+          <label for="gender-masculino">Masculino</label>
+          <input
+            type="radio"
+            name="gender"
+            id="gender-masculino"
+            value="masculino"
+            checked
+        /></span>
+
+        <span class="row">
+          <label for="gender-femenino">Femenino</label>
+          <input
+            type="radio"
+            name="gender"
+            id="gender-femenino"
+            value="femenino"
+          />
+        </span>
+
+        <span class="row">
+          <label for="gender-no-binario">No Binario</label>
+          <input
+            type="radio"
+            name="gender"
+            id="gender-no-binario"
+            value="no binario"
+          />
+        </span>
+
+        <span class="row">
+          <label for="gender-prefiero-no-decirlo">Prefiero No Decirlo</label>
+          <input
+            type="radio"
+            name="gender"
+            id="gender-prefiero-no-decirlo"
+            value="prefiero no decirlo"
+          />
+        </span>
+      </div>
+
+      <!-- SELECT INPUT -->
+
+      <div class="flex-item">
+        <label for="dropdown" id="dropdown-label" class="yellow-font"
+          >Ocupación Actual</label
+        >
+        <select name="ocupacion-actual" id="dropdown" required>
+          <option disabled selected>Seleccione su Ocupación Actual</option>
+          <option value="estudiante tiempo completo">
+            Estudiante de Tiempo Completo
+          </option>
+          <option value="estudiante medio tiempo">
+            Estudiante de Medio Tiempo
+          </option>
+          <option value="empleado tiempo completo">
+            Empleado de Tiempo Completo
+          </option>
+          <option value="empleado medio tiempo">
+            Empleado de Medio Tiempo
+          </option>
+          <option value="estudiante y empleado">Estudiante y Empleado</option>
+          <option value="ninguna anteriores">Ninguna de las Anteriores</option>
+          <option value="prefiero no decirlo">Prefiero no Decirlo</option>
+        </select>
+      </div>
+
+      <!-- CHECKBOXES INPUTS -->
+
+      <div class="flex-item">
+        <label for="electrodomesticos" class="yellow-font genero"
+          >Seleccione los Electrodomésticos que Disponga en su Hogar (Seleccione
+          Todos los que Posea)</label
+        >
+
+        <span class="row">
+          <label for="computador">Computador</label>
+          <input
+            type="checkbox"
+            name="electrodomesticos"
+            id="computador"
+            value="computador"
+          />
+        </span>
+
+        <span class="row">
+          <label for="internet">Internet</label>
+          <input
+            type="checkbox"
+            name="electrodomesticos"
+            id="internet"
+            value="internet"
+          />
+        </span>
+
+        <span class="row">
+          <label for="nevera">Nevera</label>
+          <input
+            type="checkbox"
+            name="electrodomesticos"
+            id="nevera"
+            value="nevera"
+          />
+        </span>
+
+        <span class="row">
+          <label for="lavadora">Lavadora</label>
+          <input
+            type="checkbox"
+            name="electrodomesticos"
+            id="lavadora"
+            value="lavadora"
+          />
+        </span>
+
+        <span class="row">
+          <label for="estufa">Estufa de Gas o Eléctrica</label>
+          <input
+            type="checkbox"
+            name="electrodomesticos"
+            id="estufa"
+            value="estufa"
+          />
+        </span>
+      </div>
+
+      <!-- TEXTAREA-->
+      <div class="flex-item">
+        <label for="comentarios-adicionales" class="yellow-font">
+          Describa en un Máximo de 10 Renglones su Familia
+        </label>
+        <textarea
+          name="family-description"
+          id="comentarios-adicionales"
+          cols="30"
+          rows="10"
+          required
+        >
+        </textarea>
+      </div>
+
+      <!-- SUBMIT BUTTON -->
+      <div class="flex-item">
+        <button type="submit" id="submit">Enviar</button>
+      </div>
+    </form>
+
+    <footer>
+      <p></p>
+    </footer>
+  </body>
+</html>
